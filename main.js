@@ -12,15 +12,17 @@ function onClickXHRButton(params) {
     console.log("J'ai cliquer sur ce bouton")
 }
 
-//  
+//  Je crée la fonction en question
 
 document.addEventListener('DOMContentLoaded',()=> {
     document.getElementById('xhr-button').addEventListener('click',onClickXHRButton)
 })
 
-
+// Call back = fonction qui appel une autre fonction
 
 document.addEventListener('click', ()=> {
     let container = document.getElementById('xhr-response');
     container.textContent="Direct dans l'encart"
 })
+
+// test de commit
