@@ -1,28 +1,27 @@
-document.addEventListener('DOMContentLoaded',()=> {
-    console.log('yes easy')
-})
 
-//  Event qui va se produire lorsque les elements du dom seront chargé
 
-const btn = document.getElementById('xhr-button')
-
-// J'ai déclaré la const btn avec les elements de l'id xhr-button
-
-function onClickXHRButton(params) {
-    console.log("J'ai cliquer sur ce bouton")
-}
-
-//  Je crée la fonction en question
 
 document.addEventListener('DOMContentLoaded',()=> {
     document.getElementById('xhr-button').addEventListener('click',onClickXHRButton)
 })
 
-// Call back = fonction qui appel une autre fonction
 
-document.addEventListener('click', ()=> {
-    let container = document.getElementById('xhr-response');
-    container.textContent="Direct dans l'encart"
+function onClickXHRButton() {
+    const xhr = new XMLHttpRequest()
+
+    xhr.open("get","contenu-html.html");
+    xhr.addEventListener('load',()=> {
+        console.log("Statut de la reponse : " + xhr.status + " - " + xhr.statusText);
+        const container = document.getElementById("xhr-response");
+        const response = xhr.responseText;
+        container.innerHTML = response;
+    })
+
+
+
+xhr.addEventListener("error", ()=> {
+    console.log("La requête Ajax a échoué !")
 })
 
-// test de commit
+xhr.send();
+};
