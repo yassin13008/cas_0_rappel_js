@@ -1,0 +1,21 @@
+[
+    {
+        "titre":"Starcraft 2",
+        "editeur":"Blizzard",
+        "categorie":"str"
+    }
+]
+[
+    {
+        "titre":"Raimbow-6",
+        "editeur":"Ubisoft",
+        "categorie":"fps"
+    }
+]
+[
+    {
+        "titre":"Xcom-2",
+        "editeur":"firaxis",
+        "categorie":"tactical"
+    }
+]
